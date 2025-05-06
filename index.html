@@ -30,7 +30,7 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://libretv.is-an.org/">
     
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="libs/tailwindcss.min.js"></script>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="page-bg text-white">
@@ -266,7 +266,8 @@
                             <span id="searchResultsCount">0</span> 个结果
                         </div>
                     </div>
-                    <div id="results" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3">
+                    <!-- 修改网格布局以适应大一些的横向卡片 -->
+                    <div id="results" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                         <!-- 结果将在这里动态生成 -->
                     </div>
                 </div>
@@ -390,7 +391,7 @@
     </script>
 
     <!-- 引入纯 JS sha256（HTTP 下依然可用） -->
-    <script src="https://cdn.jsdelivr.net/npm/js-sha256@0.9.0/build/sha256.min.js"></script>
+    <script src="libs/sha256.min.js"></script>
     <script>
         // 保存原始 js‑sha256 实现，避免被 password.js 覆盖
         window._jsSha256 = window.sha256;
